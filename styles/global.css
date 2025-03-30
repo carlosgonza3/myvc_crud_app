@@ -1,0 +1,138 @@
+:root {
+    /* Font Sizes */
+    --x-large: 48px;
+    --large: 30px;
+    --medium: 18px;
+    --small: 12px;
+
+    /* Colors Palette */
+    --main-dark: #272D2D;
+    --main-contrast: #23CE6B;
+    --secondary-dark: #A39BA8;
+    --secondary-contrast: #B8C5D6;
+    --background: #EDF5FC;
+}
+
+body{
+    background-color: var(--background);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+/* Header Styles */
+
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    background-color: var(--main-dark);
+    color: var(--background);
+}
+.header p{
+    font-size: var(--large);
+    font-weight: 100;
+}
+.header img {
+    margin-right: 20px;
+    width: 140px;
+    height: 90px;
+}
+
+@media (max-width: 900px) {
+    .header {
+        text-align: center;
+        padding: 10px;
+        flex-direction: column;
+    }
+    .header p{
+        font-size: var(--medium);
+        margin: 5px;
+    }
+}
+
+/* Sidebar Styles */
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--secondary-dark);
+    width: 100vw;
+    height: 50px;
+}
+.sidebar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    width: auto;
+    list-style: none;
+}
+.sidebar li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 150px;
+}
+.sidebar a {
+    text-decoration: none;
+    color: #272D2D;
+    cursor: pointer;
+}
+.active {
+    background-color: #23CE6B;
+}
+.active a{
+    color: #EDF5FC;
+}
+.sidebar li:hover {
+    background-color: #ffffff89;
+}
+.sidebar li.active:hover {
+    background-color: #23CE6B;
+    color: #EDF5FC;
+    cursor:default;
+}
+
+@media (max-width: 900px) {
+    .sidebar li {
+        text-align: center;
+    }
+    .sidebar a {
+        font-size: small;
+    }
+}
+
+/* Content Area Style */
+.content-area {
+    width: 100vw;
+    height: 100vh;
+}
+
+.title-container h1 {
+    margin: 0px 30px 0px 0px;
+    padding: 20px 50px 0px 50px;
+    max-width: 90vw;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-weight: 500;
+    font-size: 36px;
+}
+
+.title-container p {
+    margin: 0px 10px 30px 0px;
+    padding: 20px 20px 0px 50px;
+    max-width: 90vw;
+}
+
+.title-container span {
+    color: var(--main-contrast);
+    font-weight: 500;
+} 

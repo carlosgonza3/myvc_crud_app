@@ -1,0 +1,117 @@
+:root {
+    /* Font Sizes */
+    --x-large: 48px;
+    --large: 30px;
+    --medium: 18px;
+    --small: 12px;
+
+    /* Colors Palette */
+    --main-dark: #272D2D;
+    --main-contrast: #23CE6B;
+    --secondary-dark: #A39BA8;
+    --secondary-contrast: #B8C5D6;
+    --background: #EDF5FC;
+}
+
+.image-container {
+    width: 100vw;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+}
+.image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 5;
+}
+
+.image-slide-show img {
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+    transform: translateY(-50px);
+    position: relative;
+}
+@media (min-width: 1500px) {
+    .image-slide-show img{
+        margin-left: 0;
+        width: 100vw;
+        height: fit-content;
+        transform: translateY(-100px);   
+    }
+    .image-container {
+        height: 600px;
+    }
+}
+@media (max-width: 768px) {
+    .image-container {
+        height: 350px;
+    }
+    .image-slide-show img {
+        transform: translateY(-30px);
+    }
+}
+@media (max-width: 480px) {
+    .image-container {
+        height: 250px;
+    }
+    .image-slide-show img {
+        transform: translateY(-20px);
+    }
+}
+.description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: auto;
+    background-color: var(--main-contrast);
+    border-radius: 5px;
+    padding: 20px 0px;
+}
+.description p {
+    padding: 40px;
+    padding-bottom: 0;
+    font-size: 20px;
+    line-height: 2.0;
+    color: var(--background);
+    font-weight: 400;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    padding: 20px;
+    justify-content: center; /* Center items on the last row */
+    align-items: center;
+    margin-left: 30px;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    color: white;
+    font-weight: 200;
+    background-color: var(--main-dark);
+    margin: 15px;
+    border-radius: 15px;
+    width: 200px;
+    height: 150px;
+}
+
+@media (max-width:700px) {
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
