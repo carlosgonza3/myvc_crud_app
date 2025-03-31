@@ -78,17 +78,18 @@
 .description p {
     padding: 40px;
     padding-bottom: 0;
-    font-size: 20px;
+    font-size: var(--medium);
     line-height: 2.0;
     color: var(--background);
     font-weight: 400;
 }
+
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
-    justify-content: center; /* Center items on the last row */
+    justify-content: center;
     align-items: center;
     margin-left: 30px;
 }
@@ -105,8 +106,8 @@
     background-color: var(--main-dark);
     margin: 15px;
     border-radius: 15px;
-    width: 200px;
-    height: 150px;
+    width: 250px;
+    height: 200px;
 }
 
 @media (max-width:700px) {

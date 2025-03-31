@@ -1,0 +1,15 @@
+:root {
+    /* Font Sizes */
+    --x-large: 48px;
+    --large: 30px;
+    --medium: 18px;
+    --small: 12px;
+
+    /* Colors Palette */
+    --main-dark: #272D2D;
+    --main-contrast: #23CE6B;
+    --secondary-dark: #A39BA8;
+    --secondary-contrast: #B8C5D6;
+    --background: #EDF5FC;
+}
+

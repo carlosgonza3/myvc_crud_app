@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MYVC Personnel</title>
+    <title>MYVC Club Member Information</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
@@ -20,27 +20,27 @@
         <ul>
             <li> <a href="index.html">Home</a></li>
             <li> <a href="location.html">Location</a> </li>
-            <li class="active"> <a href="personnel.html">Personnel</a> </li>
+            <li> <a href="personnel.html">Personnel</a> </li>
             <li> <a href="family.html">Family Member</a> </li>
-            <li> <a href="club-member.html">Club Member</a> </li>
+            <li class="active"> <a href="club-member.html">Club Member</a> </li>
             <li> <a href="payment.html">Payments</a> </li>
             <li> <a href="reports.html">Reports</a> </li>
         </ul>
     </nav>
     <div class="content-area">
         <div class="title-container">
-            <h1>Personnel Management</h1>
-            <p>The <span>Personnel Management</span> page allows administrators to manage and track the roles and mandates of all personnel efficiently. 
-                Each personnel member is assigned one or more <span>roles</span>, such as Administrator, Coach, Captain, or other positions, with detailed information such as 
-                first name, last name, SIN, Medicare card number, telephone number, address, email address, and mandate type (volunteer or salaried). 
-                This page ensures that the system keeps accurate records of all personnel operating at one or multiple locations.
+            <h1>Club Member Management</h1>
+            <p>The <span>Club Member Management</span> page allows administrators to efficiently manage and track information related to club members. 
+                Each club member is associated with a registered family member and can only be enrolled if they are between <span>11 and 18 years old</span>. 
+                Detailed information includes the club membership number, first name, last name, date of birth, height, weight, SIN, Medicare card number, 
+                phone number, address, city, province, postal code, and the relationship with their associated family member.
             </p>
         </div>
         <div class="button-container">
             <button 
                 type="button" class="btn btn-success add" data-bs-toggle="modal" data-bs-target="#createModal">
                 <span class="material-symbols-outlined">add</span>
-                New Personnel
+                New Member
             </button>
         </div>
     </div>
@@ -50,20 +50,20 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">Create New Personnel</h5>
+              <h5 class="modal-title">Create New Club Member</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <form id="create-form">
                     <div class="mb-3">
-                      <label for="name" class="form-label">Personnel Name</label>
+                      <label for="name" class="form-label">Club Member Name</label>
                       <input type="text" class="form-control" id="name">
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary" onclick="addPersonnel()">Save changes</button>
+              <button type="button" class="btn btn-primary" onclick="addClubMember()">Save changes</button>
             </div>
           </div>
         </div>
@@ -74,7 +74,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Edit Personnel</h5>
+                    <h5 class="modal-title">Edit Club Member</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -82,19 +82,19 @@
                         <!-- Hidden field for ID -->
                         <input type="hidden" id="edit-id">
                         <div class="mb-3">
-                            <label for="edit-name" class="form-label">Personnel Name</label>
+                            <label for="edit-name" class="form-label">Club Member Name</label>
                             <input type="text" class="form-control" id="edit-name">
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" onclick="updatePersonnel()">Save changes</button>
+                    <button type="button" class="btn btn-primary" onclick="updateClubMember()">Save changes</button>
                 </div>
             </div>
         </div>
     </div>
-    <script src="scripts/personnel.js"></script>
+    <script src="scripts/clubMember.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
