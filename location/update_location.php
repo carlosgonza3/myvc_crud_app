@@ -6,24 +6,26 @@ $conn = getDBConnection();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = intval($_POST['id']);
     $name = $conn->real_escape_string($_POST['name']);
+    $type = $conn->real_escape_string($_POST['type']);
     $address = $conn->real_escape_string($_POST['address']);
     $city = $conn->real_escape_string($_POST['city']);
     $province = $conn->real_escape_string($_POST['province']);
-    $postal_code = $conn->real_escape_string($_POST['postal_code']);
-    $phone = $conn->real_escape_string($_POST['phone_number']);
-    $web_address = $conn->real_escape_string($_POST['web_address']);
+    $postal_code = $conn->real_escape_string($_POST['postal-code']);
+    $phone = $conn->real_escape_string($_POST['phone-number']);
+    $web_address = $conn->real_escape_string($_POST['web-address']);
     $capacity = intval($_POST['capacity']);
 
-    $sql = "UPDATE locations SET 
-                name = '$name',
-                address = '$address',
-                city = '$city',
-                province = '$province',
-                postal_code = '$postal_code',
-                phone = '$phone',
-                web_address = '$web_address',
-                max_capacity = $capacity
-            WHERE id = $id";
+    $sql = "UPDATE Location SET 
+                Name = '$name',
+                Type = '$type',
+                Address = '$address',
+                City = '$city',
+                Province = '$province',
+                PostalCode = '$postal_code',
+                MaxCapacity = $capacity,
+                PhoneNumbers = '$phone',
+                WebAddress = '$web_address'
+            WHERE LocationId = $id";
 
     if ($conn->query($sql) === TRUE) {
         echo json_encode(['status' => 'success', 'message' => 'Location updated successfully']);

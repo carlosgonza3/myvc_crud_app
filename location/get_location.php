@@ -7,7 +7,7 @@ $conn = getDBConnection();
 $id = isset($_GET['id']) ? intval($_GET['id']) : null;
 
 if ($id > 0) {
-    $sql = "SELECT * FROM locations WHERE id = $id";
+    $sql = "SELECT * FROM Location WHERE LocationId='$id'";
     $result = $conn->query($sql);
 
     if ($result->num_rows === 1) {

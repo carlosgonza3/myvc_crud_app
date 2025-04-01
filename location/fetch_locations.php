@@ -6,8 +6,8 @@ include '../includes/db_connection.php';
 $conn = getDBConnection();
 
 // Query to fetch locations
-$sql = "SELECT id, name, address, city, province, postal_code, phone, web_address, max_capacity FROM locations";
-$result = $conn->query($sql);
+$sql = "SELECT LocationId, Name, Type, Address, City, Province, PostalCode, MaxCapacity, PhoneNumbers, WebAddress FROM Location";
+$result = $conn->query(query: $sql);
 
 // Create an array to store data
 $locations = [];

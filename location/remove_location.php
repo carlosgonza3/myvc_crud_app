@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = $conn->real_escape_string($_POST['id']);
 
     // Insert query
-    $sql = "DELETE FROM locations WHERE id=$id";
+    $sql = "DELETE FROM Location WHERE LocationId=$id";
 
     // Check if the query was successful
     if ($conn->query($sql) === TRUE) {
